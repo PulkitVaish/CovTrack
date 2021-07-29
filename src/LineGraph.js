@@ -24,6 +24,14 @@ const options = {
   scales: {
     xAxes: [
       {
+        ticks: {
+          fontColor: "#6a5d5d",
+        },
+        gridLines:{
+          display:true,
+          drawOnChartArea:false,
+          color:"#6a5d5d",
+        },
         type: "time",
         time: {
           format: "MM/DD/YY",
@@ -34,9 +42,12 @@ const options = {
     yAxes: [
       {
         gridLines: {
-          display: false,
+          display: true,
+          drawOnChartArea:false,
+          color:"#6a5d5d",
         },
         ticks: {
+          fontColor:"#6a5d5d",
           // Include a dollar sign in the ticks
           callback: function (value, index, values) {
             return numeral(value).format("0a");

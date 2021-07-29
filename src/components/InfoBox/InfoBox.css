@@ -1,5 +1,14 @@
 .infoBox {
   flex: 1;
+  color: #6a5d5d;
+}
+
+.MuiCardContent-root {
+  background-color: #262626;
+}
+
+.infoContent {
+  background-color: #262626;
 }
 
 .infoBox:not(:last-child) {
@@ -26,7 +35,7 @@
 }
 
 .infoBox__total {
-  color: #6c757d;
+  color: #ccc;
   font-weight: 700 !important;
   font-size: 0.8rem !important;
   margin-top: 15px !important;
