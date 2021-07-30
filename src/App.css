@@ -10,11 +10,22 @@ body {
   background-color: #262626;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #1a1a1a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6a5d5d;
+}
 .app {
   display: flex;
   justify-content: space-evenly;
   background-color: #000;
-  color:#6a5d5d;
+  color: #6a5d5d;
   padding: 20px;
 }
 
@@ -41,8 +52,13 @@ body {
 .app__left {
   flex: 0.9;
 }
+.app__right {
+  height: 100%;
+  overflow: hidden;
+}
 
 .app__information {
+  padding: 0.6rem 0;
   background-color: #262626;
 }
 

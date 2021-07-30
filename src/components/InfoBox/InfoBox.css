@@ -1,6 +1,8 @@
 .infoBox {
   flex: 1;
+  border-radius: 2px;
   color: #6a5d5d;
+  cursor: pointer;
 }
 
 .MuiCardContent-root {
@@ -22,9 +24,15 @@
 .infoBox--red {
   border-color: red;
 }
+.infoBox--purple {
+  border-color: #3a20e6;
+}
 
 .infoBox__cases--green {
   color: lightgreen !important;
+}
+.infoBox__cases--purple {
+  color: #3a20e6 !important;
 }
 
 .infoBox__cases {
@@ -35,7 +43,7 @@
 }
 
 .infoBox__total {
-  color: #ccc;
+  color: #6a5d5d;
   font-weight: 700 !important;
   font-size: 0.8rem !important;
   margin-top: 15px !important;
