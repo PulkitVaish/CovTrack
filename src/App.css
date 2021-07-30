@@ -25,9 +25,8 @@ body::-webkit-scrollbar-thumb {
 .app {
   display: flex;
   justify-content: space-evenly;
-  /* background-color: #1a1a1a; */
-  background-color: white;
-  color: #6a5d5d;
+  background-color: #1a1a1a;
+  /* color: #6a5d5d; */
   padding: 20px;
 }
 
