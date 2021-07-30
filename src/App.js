@@ -86,7 +86,7 @@ const App = () => {
       .then((data) => {
         setInputCountry(countryCode);
         setCountryInfo(data);
-        if (!data) setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        if (!data) setMapCenter([34.80746, -40.4796]);
         if (document.documentElement.clientWidth < 370) {
           setMapCenter([78.9629, 20.5937]);
         } else {
