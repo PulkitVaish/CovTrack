@@ -3,7 +3,6 @@ import { Card, CardContent, Typography } from "@material-ui/core";
 import "./InfoBox.css";
 
 function InfoBox({ title, cases, total, active, isRed, ...props }) {
-  console.log(title, active);
   return (
     <Card
       onClick={props.onClick}
@@ -13,7 +12,10 @@ function InfoBox({ title, cases, total, active, isRed, ...props }) {
       ${title === "Deaths" ? "infoBox--purple" : ""}`}
     >
       <CardContent className="infoContent">
-        <Typography style={{ color: active ? "#FFA500" : "#6a5d5d" }} gutterBottom>
+        <Typography
+          style={{ color: active ? "#FFA500" : "#6a5d5d" }}
+          gutterBottom
+        >
           <strong>{title}</strong>
         </Typography>
         <h2
@@ -24,7 +26,12 @@ function InfoBox({ title, cases, total, active, isRed, ...props }) {
           {cases}
         </h2>
 
-        <Typography className="infoBox__total" style={{ color: active ? "#FFA500" : "#6a5d5d" }}>{total} Total</Typography>
+        <Typography
+          className="infoBox__total"
+          style={{ color: active ? "#FFA500" : "#6a5d5d" }}
+        >
+          {total < 1000 ? `${Math.floor(total)}` : `${total}`} Total
+        </Typography>
       </CardContent>
     </Card>
   );

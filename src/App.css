@@ -4,6 +4,7 @@
 
 body {
   background-color: #f5f6fa;
+  font-size: 62.5%;
 }
 
 .MuiCardContent-root {
@@ -32,7 +33,6 @@ body::-webkit-scrollbar-thumb {
 .app__dropdown {
   background-color: white;
 }
-
 
 .app__header {
   display: flex;
@@ -74,8 +74,18 @@ body::-webkit-scrollbar-thumb {
   margin-top: 1rem;
 }
 
-@media (max-width: 990px) {
+@media screen and (max-width: 990px) {
   .app {
+    font-size: 1.25rem;
+    flex-direction: column;
+  }
+  .app__right {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .app__stats {
     flex-direction: column;
   }
 }

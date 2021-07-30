@@ -48,3 +48,21 @@
   font-size: 0.8rem !important;
   margin-top: 15px !important;
 }
+@media screen and (max-width: 625px) {
+  .infoBox__cases {
+    font-size: 1.5rem;
+  }
+  .infoBox--selected {
+    border-top: none;
+    border-right: 10px solid greenyellow;
+  }
+  .infoBox--red {
+    border-color: red;
+  }
+  .infoBox--purple {
+    border-color: #3a20e6;
+  }
+  .infoBox:not(:last-child) {
+    margin-right: 0;
+  }
+}

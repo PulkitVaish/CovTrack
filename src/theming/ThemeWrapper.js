@@ -1,10 +1,10 @@
 import React, { createContext } from "react";
 import { CssBaseline } from "@material-ui/core";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 
 const ThemeContext = createContext(null);
 export default function ThemeWrapper({ children }) {
-  const theme = createMuiTheme({
+  const theme = createTheme({
     overrides: {
       MuiCard: {
         root: {
@@ -20,10 +20,18 @@ export default function ThemeWrapper({ children }) {
       MuiListItem: {
         root: {
           "&$selected": {
-            backgroundColor: "red",
+            backgroundColor: "#ffa500",
+            color: "white",
             "&:hover": {
               backgroundColor: "orange",
             },
+          },
+        },
+      },
+      MuiInput: {
+        underline: {
+          "&:after": {
+            borderBottom: "none",
           },
         },
       },

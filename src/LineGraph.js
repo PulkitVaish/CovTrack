@@ -27,10 +27,10 @@ const options = {
         ticks: {
           fontColor: "#6a5d5d",
         },
-        gridLines:{
-          display:true,
-          drawOnChartArea:false,
-          color:"#6a5d5d",
+        gridLines: {
+          display: true,
+          drawOnChartArea: false,
+          color: "#6a5d5d",
         },
         type: "time",
         time: {
@@ -43,11 +43,11 @@ const options = {
       {
         gridLines: {
           display: true,
-          drawOnChartArea:false,
-          color:"#6a5d5d",
+          drawOnChartArea: false,
+          color: "#6a5d5d",
         },
         ticks: {
-          fontColor:"#6a5d5d",
+          fontColor: "#6a5d5d",
           // Include a dollar sign in the ticks
           callback: function (value, index, values) {
             return numeral(value).format("0a");
@@ -86,8 +86,6 @@ function LineGraph({ casesType }) {
         .then((data) => {
           let chartData = buildChartData(data, casesType);
           setData(chartData);
-          console.log(chartData);
-          // buildChart(chartData);
         });
     };
 
