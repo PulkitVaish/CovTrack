@@ -22,7 +22,7 @@
 .table tr {
   display: flex;
   justify-content: space-between;
-  border-bottom: #6a5d5d 1px dotted;
+  border-bottom: #6a5d5d 1px solid;
 }
 
 .table td {

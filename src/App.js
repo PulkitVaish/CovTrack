@@ -19,13 +19,13 @@ import ThemeWrapper from "./theming/ThemeWrapper.js";
 
 const useStyles = makeStyles({
   menuItem: {
-    backgroundColor: "#262626",
+    backgroundColor: "#1a1a1a",
     color: "#6a5d5d",
     "&:hover": {
-      backgroundColor: "red",
+      backgroundColor: "#ffa500",
     },
     "&::active": {
-      backgroundColor: "blue",
+      backgroundColor: "#ffa500",
     },
   },
   select: {
@@ -34,6 +34,7 @@ const useStyles = makeStyles({
     padding: ".5rem 1rem",
     borderRadius: "4px",
   },
+  
 });
 
 const App = () => {
@@ -119,7 +120,11 @@ const App = () => {
           </div>
           <div className="app__stats">
             <InfoBox
-              onClick={(e) => setCasesType("cases")}
+              onClick={(e) => {
+                setCasesType("cases");
+                setDataName("Cases");
+              }
+            }
               title="Coronavirus Cases"
               isRed
               active={casesType === "cases"}

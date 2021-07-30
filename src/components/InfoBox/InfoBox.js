@@ -13,7 +13,7 @@ function InfoBox({ title, cases, total, active, isRed, ...props }) {
       ${title === "Deaths" ? "infoBox--purple" : ""}`}
     >
       <CardContent className="infoContent">
-        <Typography style={{ color: active ? "#ccc" : "#6a5d5d" }} gutterBottom>
+        <Typography style={{ color: active ? "#FFA500" : "#6a5d5d" }} gutterBottom>
           <strong>{title}</strong>
         </Typography>
         <h2
@@ -24,7 +24,7 @@ function InfoBox({ title, cases, total, active, isRed, ...props }) {
           {cases}
         </h2>
 
-        <Typography className="infoBox__total">{total} Total</Typography>
+        <Typography className="infoBox__total" style={{ color: active ? "#FFA500" : "#6a5d5d" }}>{total} Total</Typography>
       </CardContent>
     </Card>
   );
