@@ -34,7 +34,6 @@ const useStyles = makeStyles({
     padding: ".5rem 1rem",
     borderRadius: "4px",
   },
-  
 });
 
 const App = () => {
@@ -70,14 +69,11 @@ const App = () => {
           setCountries(countries);
           setMapCountries(data);
           setTableData(sortedData);
-          console.log(sortedData);
         });
     };
 
     getCountriesData();
   }, []);
-
-  console.log(casesType);
 
   const onCountryChange = async (e) => {
     const countryCode = e.target.value;
@@ -90,11 +86,15 @@ const App = () => {
       .then((data) => {
         setInputCountry(countryCode);
         setCountryInfo(data);
-        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        if (!data) setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        if (document.documentElement.clientWidth < 370) {
+          setMapCenter([78.9629, 20.5937]);
+        } else {
+          setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        }
         setMapZoom(4);
       });
   };
-
   return (
     <ThemeWrapper>
       <div className="app">
@@ -123,8 +123,7 @@ const App = () => {
               onClick={(e) => {
                 setCasesType("cases");
                 setDataName("Cases");
-              }
-            }
+              }}
               title="Coronavirus Cases"
               isRed
               active={casesType === "cases"}
