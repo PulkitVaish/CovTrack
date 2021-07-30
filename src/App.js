@@ -7,6 +7,7 @@ import {
   Card,
   CardContent,
   makeStyles,
+  Typography,
 } from "@material-ui/core";
 import InfoBox from "./components/InfoBox/InfoBox";
 import LineGraph from "./LineGraph";
@@ -15,6 +16,7 @@ import { sortData, prettyPrintStat } from "./components/Util/util.js";
 import numeral from "numeral";
 import Map from "./components/Map/Map.js";
 import "leaflet/dist/leaflet.css";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import ThemeWrapper from "./theming/ThemeWrapper.js";
 
 const useStyles = makeStyles({
@@ -86,12 +88,12 @@ const App = () => {
       .then((data) => {
         setInputCountry(countryCode);
         setCountryInfo(data);
-        if (!data) setMapCenter([34.80746, -40.4796]);
         if (document.documentElement.clientWidth < 370) {
           setMapCenter([78.9629, 20.5937]);
         } else {
           setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
         }
+        if (!data) setMapCenter([34.80746, -40.4796]);
         setMapZoom(4);
       });
   };
@@ -100,7 +102,14 @@ const App = () => {
       <div className="app">
         <div className="app__left">
           <div className="app__header">
-            <h1>CovTrack</h1>
+            <a
+              className="heading"
+              target="_blank"
+              href="https://github.com/PulkitVaish/CovTrack"
+              rel="noopener noreferrer"
+            >
+              CovTrack
+            </a>
             <FormControl className="app__dropdown">
               <Select
                 value={country}
@@ -124,7 +133,7 @@ const App = () => {
                 setCasesType("cases");
                 setDataName("Cases");
               }}
-              title="Coronavirus Cases"
+              title="Cases"
               isRed
               active={casesType === "cases"}
               cases={prettyPrintStat(countryInfo.todayCases)}
@@ -169,6 +178,22 @@ const App = () => {
             </div>
           </CardContent>
         </Card>
+      </div>
+      <div className="bottomNav">
+        <a
+          target="_blank"
+          href="https://github.com/PulkitVaish/CovTrack"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <Typography className="navText">
+              Created with Precautions
+            </Typography>
+          </div>
+          <div>
+            <GitHubIcon fontSize="small" />
+          </div>
+        </a>
       </div>
     </ThemeWrapper>
   );

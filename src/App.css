@@ -30,8 +30,39 @@ body::-webkit-scrollbar-thumb {
   padding: 20px;
 }
 
+.bottomNav {
+  background-color: #262626;
+  color: #6a5d5d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+.bottomNav a {
+  text-decoration: none;
+  color: #6a5d5d;
+  display: flex;
+}
+a {
+  transition: all 0.3s;
+}
+a:hover {
+  color: #ccc;
+}
+.navText {
+  padding-right: 0.4rem;
+  display: inline;
+  align-self: flex-start;
+}
+
 .app__dropdown {
   background-color: white;
+}
+.heading {
+  color: #6a5d5d;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 .app__header {

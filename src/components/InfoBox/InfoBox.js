@@ -23,7 +23,7 @@ function InfoBox({ title, cases, total, active, isRed, ...props }) {
         ${title === "Deaths" ? "infoBox__cases--purple" : ""}
         `}
         >
-          {cases}
+          {cases < 1000 ? `${Math.floor(cases)}` : `${cases}`}
         </h2>
 
         <Typography
