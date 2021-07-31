@@ -187,11 +187,8 @@ const App = () => {
         >
           <div>
             <Typography className="navText">
-              Created with Precautions
+              Made with Precaution by <a href="https://www.linkedin.com/in/pavan-kulkarni-a9b433201/">Pavan</a> and <a href="https://www.linkedin.com/in/pulkit-vaish/">Pulkit</a>
             </Typography>
-          </div>
-          <div>
-            <GitHubIcon fontSize="small" />
           </div>
         </a>
       </div>
