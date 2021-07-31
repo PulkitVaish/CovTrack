@@ -1,3 +1,4 @@
-#[covtrack21.web.app](covtrack.web.app)
+[# CovTrack : Coronavirus Tracker](covtrack21.web.app)
+#covtrack21.web.app
 
 This is a Coronavirus Tracker built using React.js and Material-UI, deployed on Firebase. The Leaflet library has been used to implement the map.
