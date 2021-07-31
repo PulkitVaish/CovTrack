@@ -182,7 +182,7 @@ const App = () => {
       <div className="bottomNav">
           <div>
             <Typography className="navText">
-              Made with Precaution by <a href="http://pkulkarni245.github.io" target="0">Pavan</a> and <a href="https://www.linkedin.com/in/pulkit-vaish/" target="0">Pulkit</a>
+              Made with Precaution by <a href="https://www.linkedin.com/in/pavan-kulkarni-a9b433201/" target="0">Pavan</a> and <a href="https://www.linkedin.com/in/pulkit-vaish/" target="0">Pulkit</a>
             </Typography>
           </div>
       </div>
