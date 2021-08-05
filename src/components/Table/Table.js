@@ -4,7 +4,6 @@ import "./Table.css";
 import numeral from "numeral";
 
 function Table({ countries }) {
-  console.log(countries);
   return (
     <div className="table">
       {countries.map((country, i) => (

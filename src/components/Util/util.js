@@ -39,7 +39,7 @@ export const prettyPrintStat = (stat) =>
   stat ? `+${numeral(stat).format("0.0a")}` : "+0";
 
 export const showDataOnMap = (data, casesType = "cases") =>
-  data.map((country) => (
+  data.map((country, i) => (
     <Circle
       center={[country.countryInfo.lat, country.countryInfo.long]}
       color={casesTypeColors[casesType].hex}
@@ -48,13 +48,15 @@ export const showDataOnMap = (data, casesType = "cases") =>
       radius={
         Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier
       }
+      key={i}
     >
       <Popup>
         <div className="info-container">
-          <div
+          <img
             className="info-flag"
-            style={{ backgroundImage: `url(${country.countryInfo.flag})` }}
-          ></div>
+            src={country.countryInfo.flag}
+            alt={country.country}
+          />
           <div className="info-name">{country.country}</div>
           <div className="info-confirmed">
             Cases: {numeral(country.cases).format("0,0")}

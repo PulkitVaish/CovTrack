@@ -9,18 +9,21 @@
 
 .map .leaflet-container {
   height: 100%;
-  border-radius: 12px;
 }
 
-.info-flag img {
-  width: 100px;
-  border-radius: 5px;
+.map .leaflet-popup-content-wrapper {
+  background-color: #262626;
+}
+
+.map .leaflet-popup-tip {
+  background-color: #262626;
 }
 
 .info-name {
   font-size: 20px;
   font-weight: bold;
-  color: #555;
+  text-align: center;
+  color: #ccc;
 }
 
 .info-container {
@@ -30,9 +33,9 @@
 .info-flag {
   height: 100px;
   width: 100%;
-  object-fit: contain;
-  background-size: cover;
-  border-radius: 8px;
+  object-fit: fill;
+  border-radius: 4px;
+  border: 1px solid #555;
 }
 
 .info-confirmed,
@@ -40,4 +43,5 @@
 .info-deaths {
   font-size: 16px;
   margin-top: 5px;
+  color: #ccc;
 }

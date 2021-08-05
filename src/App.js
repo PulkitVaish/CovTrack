@@ -47,7 +47,7 @@ const App = () => {
   const [tableData, setTableData] = useState([]);
   const [casesType, setCasesType] = useState("cases");
   const [dataName, setDataName] = useState("Cases");
-  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapCenter, setMapCenter] = useState({ lat: 20, lng: 77 });
   const [mapZoom, setMapZoom] = useState(3);
 
   useEffect(() => {
@@ -69,6 +69,7 @@ const App = () => {
           }));
           let sortedData = sortData(data);
           setCountries(countries);
+          console.log(countries);
           setMapCountries(data);
           setTableData(sortedData);
         });
@@ -88,13 +89,15 @@ const App = () => {
       .then((data) => {
         setInputCountry(countryCode);
         setCountryInfo(data);
-        if (document.documentElement.clientWidth < 370) {
-          setMapCenter([78.9629, 20.5937]);
+        if (countryCode === "worldwide") {
+          setMapCenter({ lat: 34.80746, lng: -40.4796 });
         } else {
+          if (data.population < 100000) {
+            setMapZoom(10);
+          }
+          setMapZoom(5);
           setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
         }
-        if (!data) setMapCenter([34.80746, -40.4796]);
-        setMapZoom(4);
       });
   };
   return (

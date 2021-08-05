@@ -16,6 +16,19 @@ export default function ThemeWrapper({ children }) {
           paddingTop: "0",
           paddingBottom: "0",
         },
+        paper: {
+          "&::-webkit-scrollbar": {
+            width: "0.5em",
+          },
+          "&::-webkit-scrollbar-track": {
+            backgroundColor: "#6a5d5d",
+          },
+          "::-webkit-scrollbar-thumb": {
+            width: ".5em",
+            color: "#ccc",
+            borderRadius: "5px",
+          },
+        },
       },
       MuiListItem: {
         root: {
