@@ -183,20 +183,11 @@ const App = () => {
         </Card>
       </div>
       <div className="bottomNav">
-        <a
-          target="_blank"
-          href="https://github.com/PulkitVaish/CovTrack"
-          rel="noopener noreferrer"
-        >
           <div>
             <Typography className="navText">
-              Created with Precautions
+              Made with Precaution by <a href="https://www.linkedin.com/in/pavan-kulkarni-a9b433201/" target="0">Pavan</a> and <a href="https://www.linkedin.com/in/pulkit-vaish/" target="0">Pulkit</a>
             </Typography>
           </div>
-          <div>
-            <GitHubIcon fontSize="small" />
-          </div>
-        </a>
       </div>
     </ThemeWrapper>
   );

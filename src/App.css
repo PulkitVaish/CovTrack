@@ -59,6 +59,11 @@ a:hover {
   align-self: flex-start;
 }
 
+.navText > a {
+  display: inline;
+  text-decoration: underline;
+}
+
 .app__dropdown {
   background-color: white;
 }
