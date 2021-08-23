@@ -24,8 +24,7 @@ export default function ThemeWrapper({ children }) {
             backgroundColor: "#6a5d5d",
           },
           "::-webkit-scrollbar-thumb": {
-            width: ".5em",
-            color: "#ccc",
+            backgroundColor: "#ccc",
             borderRadius: "5px",
           },
         },

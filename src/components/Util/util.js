@@ -2,7 +2,7 @@ import React from "react";
 import numeral from "numeral";
 import { Circle, Popup } from "react-leaflet";
 
-const casesTypeColors = {
+export const casesTypeColors = {
   cases: {
     hex: "#CC1034",
     rgb: "rgb(204, 16, 52)",
@@ -59,13 +59,13 @@ export const showDataOnMap = (data, casesType = "cases") =>
           />
           <div className="info-name">{country.country}</div>
           <div className="info-confirmed">
-            Cases: {numeral(country.cases).format("0,0")}
+            Cases: {country.cases.toLocaleString("en-IN")}
           </div>
           <div className="info-recovered">
-            Recovered: {numeral(country.recovered).format("0,0")}
+            Recovered: {country.recovered.toLocaleString("en-IN")}
           </div>
           <div className="info-deaths">
-            Deaths: {numeral(country.deaths).format("0,0")}
+            Deaths: {country.deaths.toLocaleString("en-IN")}
           </div>
         </div>
       </Popup>

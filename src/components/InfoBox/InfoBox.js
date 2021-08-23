@@ -23,14 +23,14 @@ function InfoBox({ title, cases, total, active, isRed, ...props }) {
         ${title === "Deaths" ? "infoBox__cases--purple" : ""}
         `}
         >
-          {cases < 1000 ? `${Math.floor(cases)}` : `${cases}`}
+          {cases <= 1000 ? `${Math.trunc(cases)}` : `${cases}`}
         </h2>
 
         <Typography
           className="infoBox__total"
           style={{ color: active ? "#FFA500" : "#6a5d5d" }}
         >
-          {total < 1000 ? `${Math.floor(total)}` : `${total}`} Total
+          {total <= 1000 ? `${Math.trunc(total)}` : `${total}`} Total
         </Typography>
       </CardContent>
     </Card>
